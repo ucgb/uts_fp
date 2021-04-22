@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2021 at 11:07 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 7.3.27
+-- Waktu pembuatan: 22 Apr 2021 pada 12.39
+-- Versi server: 10.4.16-MariaDB
+-- Versi PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,40 +18,47 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `uts_18090081`
+-- Database: `uts_17090096`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `surat`
+-- Struktur dari tabel `laptop`
 --
 
-CREATE TABLE `surat` (
+CREATE TABLE `laptop` (
   `id` int(11) NOT NULL,
-  `nomor_surat` int(11) NOT NULL,
-  `tanggal_surat` varchar(23) NOT NULL,
-  `judul_surat` varchar(100) NOT NULL
+  `merk_laptop` varchar(25) NOT NULL,
+  `seri_laptop` varchar(20) NOT NULL,
+  `tahun_produksi` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `laptop`
+--
+
+INSERT INTO `laptop` (`id`, `merk_laptop`, `seri_laptop`, `tahun_produksi`) VALUES
+(1, 'acer', '12313', '12asda12');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `surat`
+-- Indeks untuk tabel `laptop`
 --
-ALTER TABLE `surat`
+ALTER TABLE `laptop`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `surat`
+-- AUTO_INCREMENT untuk tabel `laptop`
 --
-ALTER TABLE `surat`
+ALTER TABLE `laptop`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
